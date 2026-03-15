@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIROS - Placement Intelligence & Resume Optimization System</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a1f43",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111721",
+                    },
+                    fontFamily: {
+                        display: ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-display bg-background-light text-slate-900">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="sticky top-0 z-50 w-full bg-white border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex justify-between items-center h-16">
+
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+                    <span class="text-primary text-2xl font-black">PIROS</span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary" href="Landing.html">
+                        Home
+                    </a>
+
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary" href="#">
+                        About
+                    </a>
+
+                    <!-- CHANGE: login page link -->
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary" href="Login.html">
+                        Login
+                    </a>
+
+                    <!-- CHANGE: register page link -->
+                    <a class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90"
+                        href="Register.html">
+                        Register
+                    </a>
+
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="pt-20 pb-24">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="flex flex-col gap-6">
+
+                    <div
+                        class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium text-primary bg-primary/10 w-fit">
+                        Now powered by Advanced AI Insights
+                    </div>
+
+                    <h1 class="text-primary text-5xl lg:text-6xl font-black leading-tight">
+                        Data-Driven Placement Readiness Platform
+                    </h1>
+
+                    <p class="text-slate-600 text-lg leading-relaxed max-w-xl">
+                        Optimize your resume with AI-driven insights and predict your match with top-tier companies
+                        using our advanced career intelligence system.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+
+                        <!-- CHANGE: button converted to link -->
+                        <a href="Login.html"
+                            class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90">
+
+                            Student Login
+
+                        </a>
+
+                        <!-- CHANGE: button converted to link -->
+                        <a href="Login.html"
+                            class="bg-white text-primary border-2 border-primary/20 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary">
+
+                            Admin Login
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                        class="rounded-2xl shadow-xl" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-primary text-4xl font-black">
+                    Our Core Features
+                </h2>
+
+                <p class="text-slate-500 mt-4">
+                    Empowering students with placement intelligence.
+                </p>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="p-6 rounded-xl border">
+
+                    <h3 class="font-bold text-lg text-primary mb-2">
+                        Resume Analysis
+                    </h3>
+
+                    <p class="text-slate-500 text-sm">
+                        AI-powered scoring and resume suggestions.
+                    </p>
+
+                </div>
+
+                <div class="p-6 rounded-xl border">
+
+                    <h3 class="font-bold text-lg text-primary mb-2">
+                        Company Matching
+                    </h3>
+
+                    <p class="text-slate-500 text-sm">
+                        Predict your fit based on company requirements.
+                    </p>
+
+                </div>
+
+                <div class="p-6 rounded-xl border">
+
+                    <h3 class="font-bold text-lg text-primary mb-2">
+                        Skill Gap Detection
+                    </h3>
+
+                    <p class="text-slate-500 text-sm">
+                        Find missing skills for your dream role.
+                    </p>
+
+                </div>
+
+                <div class="p-6 rounded-xl border">
+
+                    <h3 class="font-bold text-lg text-primary mb-2">
+                        Smart Dashboard
+                    </h3>
+
+                    <p class="text-slate-500 text-sm">
+                        Track readiness and applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="py-20 bg-background-light">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="text-4xl font-black text-primary mb-6">
+                Ready to optimize your career path?
+            </h2>
+
+            <p class="text-slate-600 mb-8">
+                Join PIROS and start your AI-driven placement journey.
+            </p>
+
+            <!-- CHANGE -->
+            <a href="Register.html" class="bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg">
+
+                Get Started Now
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-background-dark py-16 text-center">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <h2 class="text-white text-2xl font-bold mb-4">
+                PIROS
+            </h2>
+
+            <p class="text-slate-400 mb-6">
+                AI powered placement intelligence platform
+            </p>
+
+            <p class="text-slate-500 text-sm">
+                © 2026 PIROS. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

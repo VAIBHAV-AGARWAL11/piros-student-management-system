@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PIROS - Login</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a1f43",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111721",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen">
+
+    <div class="flex flex-col lg:flex-row min-h-screen w-full">
+
+
+        <!-- LEFT SIDE -->
+
+        <div
+            class="relative w-full lg:w-1/2 bg-primary flex flex-col items-center justify-center p-8 lg:p-16 overflow-hidden">
+
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-white/20 blur-3xl"></div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-white/20 blur-3xl">
+                </div>
+            </div>
+
+            <div class="relative z-10 w-full max-w-lg text-center lg:text-left">
+
+                <div class="flex items-center gap-3 mb-8 justify-center lg:justify-start">
+
+                    <div class="bg-white text-primary p-2 rounded-lg">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+
+                    <span class="text-white text-2xl font-bold tracking-tight">
+                        PIROS
+                    </span>
+
+                </div>
+
+                <h1 class="text-white text-4xl lg:text-5xl font-bold leading-tight mb-6">
+
+                    Placement Intelligence & <br>
+
+                    <span class="text-blue-300">
+                        Resume Optimization
+                    </span>
+
+                </h1>
+
+                <p class="text-blue-100 text-lg mb-10 leading-relaxed">
+
+                    Empowering students with AI-driven resume parsing and intelligent career matching for the modern job
+                    market.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE LOGIN -->
+
+        <div
+            class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 lg:p-20 bg-background-light dark:bg-background-dark">
+
+            <div class="w-full max-w-md">
+
+
+                <div class="mb-10">
+
+                    <h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-2">
+
+                        Welcome Back
+
+                    </h2>
+
+                    <p class="text-slate-500 dark:text-slate-400">
+
+                        Please enter your credentials to access your dashboard.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- MODIFIED FORM -->
+
+                <form class="space-y-6" onsubmit="loginUser(event)">
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="space-y-2">
+
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+
+                            Email Address
+
+                        </label>
+
+                        <input class="w-full py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-700"
+                            type="email" placeholder="name@university.edu" required>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="space-y-2">
+
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+
+                            Password
+
+                        </label>
+
+                        <input class="w-full py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-700"
+                            type="password" placeholder="••••••••" required>
+
+                    </div>
+
+
+
+                    <!-- ROLE SELECTOR -->
+
+                    <div class="space-y-2">
+
+                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+
+                            Login As
+
+                        </label>
+
+                        <select id="role"
+                            class="w-full py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-700">
+
+                            <option value="student">Student</option>
+
+                            <option value="admin">Administrator</option>
+
+                            <option value="recruiter">Recruiter</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="flex items-center">
+
+                        <input type="checkbox" class="mr-2">
+
+                        <label class="text-sm text-slate-600">
+
+                            Remember this device
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-4 rounded-lg transition-colors shadow-lg shadow-primary/20">
+
+                        Sign In
+
+                    </button>
+
+                </form>
+
+
+
+                <!-- REGISTER LINK -->
+
+                <div class="mt-8 pt-8 border-t border-slate-100 text-center">
+
+                    <p class="text-slate-600">
+
+                        New to PIROS?
+
+                        <a class="text-primary font-bold hover:underline" href="Register.html"> <!-- MODIFIED -->
+
+                            Create an account
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ADDED SCRIPT -->
+
+    <script>
+
+        function loginUser(event) {
+
+            event.preventDefault();
+
+            let role = document.getElementById("role").value;
+
+            if (role === "admin") {
+
+                window.location.href = "adminDashboard.html";
+
+            }
+
+            else {
+
+                window.location.href = "StudentDetails.html";
+
+            }
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>f

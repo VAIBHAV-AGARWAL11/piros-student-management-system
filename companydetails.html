@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Add Company | PIROS</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a1f43",
+                        accent: "#1e88e5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111721",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display">
+
+    <div
+        class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-slate-900 shadow-xl overflow-x-hidden">
+
+
+        <!-- HEADER -->
+
+        <div
+            class="sticky top-0 z-10 flex items-center bg-white dark:bg-slate-900 p-4 border-b border-slate-100 dark:border-slate-800 justify-between">
+
+            <a href="adminDashboard.html" class="text-primary flex size-10 items-center justify-center">
+
+                <span class="material-symbols-outlined">arrow_back</span>
+
+            </a>
+
+            <h2 class="text-lg font-bold flex-1 text-center pr-10">
+                Add New Company
+            </h2>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <main class="flex-1 overflow-y-auto pb-24">
+
+            <div class="px-4 pt-6 pb-2">
+
+                <h3 class="text-xl font-bold">
+                    Company Profile
+                </h3>
+
+                <p class="text-sm text-slate-500">
+                    Enter the details for the upcoming recruitment drive.
+                </p>
+
+            </div>
+
+
+            <form class="space-y-5 px-4 py-4" onsubmit="addCompany(event)">
+
+
+                <!-- COMPANY NAME -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Company Name *
+                    </label>
+
+                    <input class="w-full rounded-lg border-slate-200 h-12 px-4" placeholder="e.g. PIROS" required
+                        type="text">
+
+                </div>
+
+
+                <!-- CGPA -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Minimum CGPA *
+                    </label>
+
+                    <input class="w-full rounded-lg border-slate-200 h-12 px-4" placeholder="7.5" required step="0.01"
+                        type="number">
+
+                </div>
+
+
+                <!-- REQUIRED SKILLS -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Required Skills
+                    </label>
+
+                    <textarea class="w-full rounded-lg border-slate-200 p-4" rows="3"
+                        placeholder="Java, AWS, Python"></textarea>
+
+                </div>
+
+
+                <!-- PREFERRED SKILLS -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Preferred Skills
+                    </label>
+
+                    <textarea class="w-full rounded-lg border-slate-200 p-4" rows="3"
+                        placeholder="Leadership, Communication"></textarea>
+
+                </div>
+
+
+                <!-- KEYWORDS -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Selected Students Keywords
+                    </label>
+
+                    <textarea class="w-full rounded-lg border-slate-200 p-4" rows="3"
+                        placeholder="Problem Solving, Leadership"></textarea>
+
+                </div>
+
+
+                <!-- INTERVIEW ROUNDS -->
+
+                <div>
+
+                    <label class="text-sm font-semibold">
+                        Interview Rounds
+                    </label>
+
+                    <input class="w-full rounded-lg border-slate-200 h-12 px-4"
+                        placeholder="3 Rounds: Aptitude, Technical, HR" type="text">
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="pt-4">
+
+                    <button
+                        class="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2"
+                        type="submit">
+
+                        <span class="material-symbols-outlined">add_business</span>
+
+                        Register Company
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </main>
+
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t bg-white z-20">
+
+            <div class="flex gap-2 px-4 pb-4 pt-2">
+
+                <a class="flex flex-1 flex-col items-center text-slate-400" href="adminDashboard.html">
+
+                    <span class="material-symbols-outlined">home</span>
+                    <p class="text-[10px]">Home</p>
+
+                </a>
+
+
+                <a class="flex flex-1 flex-col items-center text-primary" href="view-companies.html">
+
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1">corporate_fare</span>
+                    <p class="text-[10px]">Companies</p>
+
+                </a>
+
+
+                <a class="flex flex-1 flex-col items-center text-slate-400" href="student-analytics.html">
+
+                    <span class="material-symbols-outlined">group</span>
+                    <p class="text-[10px]">Students</p>
+
+                </a>
+
+
+                <a class="flex flex-1 flex-col items-center text-slate-400" href="Login.html">
+
+                    <span class="material-symbols-outlined">settings</span>
+                    <p class="text-[10px]">Logout</p>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <script>
+
+        function addCompany(event) {
+
+            event.preventDefault();
+
+            alert("Company Registered Successfully");
+
+            window.location.href = "adminDashboard.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

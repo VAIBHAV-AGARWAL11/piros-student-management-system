@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PIROS Admin Dashboard</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a1f43",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111721",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+
+    <!-- HEADER -->
+
+    <header
+        class="sticky top-0 z-40 w-full bg-white dark:bg-slate-900 border-b border-primary/10 px-4 py-3 flex items-center justify-between shadow-sm">
+
+        <div class="flex items-center gap-3">
+
+            <h1 class="text-2xl font-bold tracking-tighter text-primary">
+                PIROS
+            </h1>
+
+        </div>
+
+        <div class="flex items-center gap-4">
+
+            <button class="relative p-2 text-slate-500">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+
+            <div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="flex">
+
+        <!-- SIDEBAR -->
+
+        <aside
+            class="hidden lg:flex w-64 flex-col bg-white dark:bg-slate-900 border-r border-primary/10 min-h-[calc(100vh-64px)] p-4">
+
+            <nav class="space-y-1">
+
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-white font-medium"
+                    href="adminDashboard.html">
+
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-primary/5 hover:text-primary"
+                    href="companydetails.html">
+
+                    <span class="material-symbols-outlined">domain_add</span>
+                    <span>Add Company</span>
+
+                </a>
+
+
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-primary/5 hover:text-primary"
+                    href="view-companies.html">
+
+                    <span class="material-symbols-outlined">apartment</span>
+                    <span>View Companies</span>
+
+                </a>
+
+
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-primary/5 hover:text-primary"
+                    href="student-analytics.html">
+
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span>Student Analytics</span>
+
+                </a>
+
+
+                <div class="pt-10">
+
+                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50"
+                        href="Login.html">
+
+                        <span class="material-symbols-outlined">logout</span>
+                        <span>Logout</span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl mx-auto w-full">
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm">
+                    <p class="text-slate-500 text-sm">Total Companies</p>
+                    <h3 class="text-2xl font-bold">45</h3>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm">
+                    <p class="text-slate-500 text-sm">Total Students</p>
+                    <h3 class="text-2xl font-bold">1200</h3>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm">
+                    <p class="text-slate-500 text-sm">Avg Match Score</p>
+                    <h3 class="text-2xl font-bold">78%</h3>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-xl shadow-sm">
+                    <p class="text-slate-500 text-sm">Eligible Students</p>
+                    <h3 class="text-2xl font-bold">65%</h3>
+                </div>
+
+            </div>
+
+
+            <!-- RECENT COMPANY TABLE -->
+
+            <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden">
+
+                <div class="px-6 py-4 border-b flex items-center justify-between">
+
+                    <h4 class="text-lg font-bold">
+                        Recent Company Uploads
+                    </h4>
+
+                    <a href="view-companies.html" class="text-primary text-sm font-bold hover:underline">
+
+                        View All
+
+                    </a>
+
+                </div>
+
+
+                <div class="overflow-x-auto">
+
+                    <table class="w-full text-left">
+
+                        <thead class="bg-background-light text-xs uppercase">
+
+                            <tr>
+                                <th class="px-6 py-3">Company</th>
+                                <th class="px-6 py-3">CGPA</th>
+                                <th class="px-6 py-3">Skills</th>
+                                <th class="px-6 py-3">Date</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody class="divide-y text-sm">
+
+                            <tr>
+
+                                <td class="px-6 py-4 font-semibold">
+                                    TechCorp Systems
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    3.50
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    Java, AWS
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    Oct 24
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="px-6 py-4 font-semibold">
+                                    DataInc Solutions
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    3.20
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    Python, SQL
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    Oct 22
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="px-6 py-4 font-semibold">
+                                    SoftSol Labs
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    3.40
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    React, Figma
+                                </td>
+
+                                <td class="px-6 py-4">
+                                    Oct 21
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2">
+
+        <a class="flex flex-col items-center text-primary" href="adminDashboard.html">
+
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-[10px] font-bold">Home</span>
+
+        </a>
+
+
+        <a class="flex flex-col items-center text-slate-400" href="student-analytics.html">
+
+            <span class="material-symbols-outlined">analytics</span>
+            <span class="text-[10px]">Reports</span>
+
+        </a>
+
+
+        <a class="flex flex-col items-center text-slate-400" href="view-companies.html">
+
+            <span class="material-symbols-outlined">apartment</span>
+            <span class="text-[10px]">Firms</span>
+
+        </a>
+
+
+        <a class="flex flex-col items-center text-slate-400" href="Login.html">
+
+            <span class="material-symbols-outlined">logout</span>
+            <span class="text-[10px]">Logout</span>
+
+        </a>
+
+    </div>
+
+    <div class="h-16 lg:hidden"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PIROS - Placement Intelligence &amp; Resume Optimization System</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a1f43",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111721",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light text-slate-900 transition-colors duration-300">
+    <!-- TopAppBar / Navbar -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl font-bold">analytics</span>
+                    <span class="text-primary text-2xl font-black tracking-tighter">PIROS</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                        href="Landing.html">Home</a>
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                        href="#">About</a>
+                    <a class="text-sm font-semibold text-slate-700 hover:text-primary transition-colors"
+                        href="Login.html">Login</a>
+                    <a class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-md shadow-primary/20"
+                        href="Register.html">Register</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-8">
+                        <div
+                            class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium leading-5 text-primary bg-primary/10 w-fit">
+                            <span>Now powered by Advanced AI Insights</span>
+                        </div>
+                        <h1 class="text-primary text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                            Data-Driven Placement Readiness Platform
+                        </h1>
+                        <p class="text-slate-600 text-lg lg:text-xl leading-relaxed max-w-xl">
+                            Optimize your resume with AI-driven insights and predict your match with top-tier companies
+                            using our advanced career intelligence system.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="window.location.href='Login.html'"
+                                class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 flex items-center gap-2">
+                                Student Login
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                            <button onclick="window.location.href='Login.html'"
+                                class="bg-white text-primary border-2 border-primary/20 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/40 hover:bg-primary/5 transition-all">
+                                Admin Login
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm font-medium">
+                            <div class="flex -space-x-2">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center overflow-hidden">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Portrait of a diverse young professional student"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvz5wRhdJEZfG1w16OLjgw0oabKef9ISkwCoUoRVI-QuxQcV-Yfe80kb5-mF-MTUYWARvzNhK-AworfjLQbIKKY_S8rJgSgY_G4EHZiXD6e7HSc7qTQTY-LYYb0aTyvTCycdAX6qTk3LP4Qv9HEk56ItkejvkXuJrEorUywBcFf-9L3aWz13_3Cps7jZjwTmOGl5KInsZ3UJIzkAK1VMpjBWrm0GiL_n7xJOJcVelGTPiCRuwqqC4LRrEYm86Yppc7-52bvGj4Cdr-" />
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center overflow-hidden">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Portrait of a successful male student"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCng6wTIaXGTIPCrd0r_5XH4G2fw2eVfXH4FAnWcJlCjR1ima85BqoWFiIOZeGNdzQsKSBeNXMiXQoUBeIPNriYTaVZKzNg0gPrlA8N3Z5h-71lecsVN7LSr37wXd6LkLbm8dYhHUkjI8T7BndB5P1-m7d8WsoL5Ed_mEaf4Q3HQ7ncoS1HJkRg26YQwteNreV7lfyejbpMkcBOhM-wJcswz6kP-HTih2ke01p5H_K9WSIZ9zWbiCJtpNq1L6GADHbMX4vvXiIu1c_-" />
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center overflow-hidden text-[10px] font-bold text-primary">
+                                    +12k
+                                </div>
+                            </div>
+                            <span>Trusted by 12,000+ students globally</span>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-primary/10 rounded-[2rem] -rotate-3 transition-transform group-hover:rotate-0">
+                        </div>
+                        <div class="relative w-full aspect-[4/3] bg-cover bg-center rounded-[2rem] shadow-2xl overflow-hidden border-8 border-white"
+                            data-alt="Data dashboard showing career analytics and statistics"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf6YsdCvEtIYqGOrT4uGxdrJE9RkwpGVp9qsIZrLrErTAPk09slj_oyGTpTL8gfV9le3HVd2xzsw3QNS02IsCv9dmp75rj5XJxv6Fgyx1CCSTh06-t92Zhy1iRL9pfiO65c6Nl46hukqj6R-pkc8Wdpz193odUFz8ZK2ajMFYNp9r93nlhDNgkUGI3ZWvzN3eEMXiLAkereNfpBL9REp_f7Fu3DNmDZ-CkoP3njghdxOX1qO-5YG5AZbi6tso_TC3-OaSLyxfWHhdC');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-primary/5 flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Analysis Status</p>
+                                <p class="text-primary font-bold">Resume Verified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Abstract background elements -->
+            <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+            <div class="absolute bottom-10 left-10 -z-10 w-64 h-64 bg-primary/5 blur-3xl rounded-full"></div>
+        </section>
+        <!-- Features Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20 flex flex-col items-center gap-4">
+                    <h2 class="text-primary text-4xl lg:text-5xl font-black tracking-tight">Our Core Features</h2>
+                    <p class="text-slate-500 text-lg max-w-2xl">
+                        Empowering students with advanced placement intelligence to bridge the gap between education and
+                        employment.
+                    </p>
+                    <div class="w-20 h-1.5 bg-primary rounded-full mt-2"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="group p-8 rounded-2xl border border-slate-100 bg-background-light/50 hover:bg-white hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col gap-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">description</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-primary text-xl font-bold">Resume Analysis</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Get instant AI-powered scoring and deep-dive suggestions to optimize your resume for
+                                ATS.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="group p-8 rounded-2xl border border-slate-100 bg-background-light/50 hover:bg-white hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col gap-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">hub</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-primary text-xl font-bold">Company Matching</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Predict your fit based on data-driven historical placement patterns and company
+                                requirements.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="group p-8 rounded-2xl border border-slate-100 bg-background-light/50 hover:bg-white hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col gap-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">search_insights</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-primary text-xl font-bold">Skill Gap Detection</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Identify exactly what's missing for your dream role and get curated learning paths to
+                                fill those gaps.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div
+                        class="group p-8 rounded-2xl border border-slate-100 bg-background-light/50 hover:bg-white hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col gap-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">dashboard</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-primary text-xl font-bold">Smart Dashboard</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Track your readiness progress, application statuses, and interview schedules in
+                                real-time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-20 bg-background-light">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-primary rounded-[2.5rem] p-10 lg:p-16 text-center text-white relative overflow-hidden shadow-2xl">
+                    <!-- Subtle background patterns -->
+                    <div class="absolute inset-0 opacity-10 pointer-events-none">
+                        <div
+                            class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-[120px] translate-x-1/2 translate-y-1/2">
+                        </div>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center gap-8">
+                        <h2 class="text-3xl lg:text-5xl font-black leading-tight tracking-tight">Ready to optimize your
+                            career path?</h2>
+                        <p class="text-white/80 text-lg lg:text-xl max-w-2xl">
+                            Join PIROS today and get started with our intelligence system. Your dream career is just a
+                            few clicks away.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                            <button
+                                class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition-all">Get
+                                Started Now</button>
+                            <button
+                                class="bg-primary/20 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/30 transition-all">Contact
+                                Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-background-dark py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div class="col-span-1 md:col-span-2 flex flex-col gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-white text-3xl font-bold">analytics</span>
+                        <span class="text-white text-2xl font-black tracking-tighter">PIROS</span>
+                    </div>
+                    <p class="text-slate-400 text-base max-w-sm leading-relaxed">
+                        The world's most advanced placement intelligence platform helping students unlock their full
+                        career potential through data and AI.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="flex flex-col gap-4 text-slate-400">
+                        <li><a class="hover:text-white transition-colors" href="Landing.html">Home</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="Login.html">Student Login</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Connect</h4>
+                    <ul class="flex flex-col gap-4 text-slate-400">
+                        <li><a class="hover:text-white transition-colors"
+                                href="mailto:contact@piros.edu">contact@piros.edu</a></li>
+                        <li class="flex gap-4 mt-2">
+                            <a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">share</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">group</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-sm">
+                    © 2024 PIROS - Placement Intelligence &amp; Resume Optimization System. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6 text-slate-500 text-xs uppercase tracking-widest font-bold">
+                    <span>Terms of Service</span>
+                    <span>GDPR Compliant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
